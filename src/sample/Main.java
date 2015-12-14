@@ -15,12 +15,8 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Image viewer");
+        Controller.init();
         primaryStage.setScene(new Scene(root, 1200, 1000));
-
-        //Image image = new Image("@image.jpg"); //, 800, 600, false, true);
-
-        //ImageView imageView = null;
-        //imageView.setImage(image);
 
         primaryStage.show();
     }
