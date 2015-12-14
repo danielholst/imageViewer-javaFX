@@ -12,34 +12,43 @@
 <?import javafx.scene.layout.AnchorPane?>
 <GridPane style="-fx-background-color: darkgrey" fx:controller="sample.Controller"
           xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10" >
-    <padding> <Insets top="10" right="10" bottom="50" left="50"/> </padding>
 
-<Label style="-fx-font: NORMAL 20 Tahoma;" text="Image viewer"
-       GridPane.columnIndex="2" GridPane.rowIndex="0">
-</Label>
+    <Label style="-fx-font: NORMAL 30 Tahoma;" text="Image viewer" >
+        <padding>
+            <Insets bottom="10.0" left="0.0" right="0.0" top="10.0" />
+        </padding>
+        GridPane.columnIndex="2" GridPane.rowIndex="0">
+    </Label>
 
-
-    <Button text="Rotate left"  GridPane.columnIndex="0" GridPane.rowIndex="0"/>
-    <Button text="Scale down"  GridPane.columnIndex="1" GridPane.rowIndex="0"/>
-    <Button text="Scale up"  GridPane.columnIndex="3" GridPane.rowIndex="0"/>
-    <Button text="Rotate right"  GridPane.columnIndex="4" GridPane.rowIndex="0"/>
-                <!--onAction="#handleSubmitButtonAction"-->
-
-
-
-
-    <ImageView fx:id="imageView" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="5" fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="imageView" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="5" fitHeight="800.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
         <image>
             <Image url="@image.jpg" />
         </image>
     </ImageView>
 
-<!-- <ImageView fx:id="imageView" GridPane.columnIndex="0"
-           GridPane.rowIndex="1">
-    <image>
-        <Image url="@image.jpg" />
-    </image>
-</ImageView>
+    <Button text="Rotate left"  GridPane.columnIndex="0" GridPane.rowIndex="2" onAction="#handleRotateLeft">
+    <padding>
+        <Insets bottom="10.0" left="65.0" right="65.0" top="10.0" />
+    </padding>
+    </Button>
 
-layoutX="29.0" layoutY="44.0"-->
+    <Button text="Scale down"  GridPane.columnIndex="1" GridPane.rowIndex="2" onAction="#handleScaleDown">
+        <padding>
+            <Insets bottom="10.0" left="65.0" right="65.0" top="10.0" />
+        </padding>
+    </Button>
+
+
+    <Button text="Scale up"  GridPane.columnIndex="2" GridPane.rowIndex="2" onAction="#handleScaleUp">
+        <padding>
+            <Insets bottom="10.0" left="65.0" right="65.0" top="10.0" />
+        </padding>
+    </Button>
+
+    <Button text="Rotate right"  GridPane.columnIndex="3" GridPane.rowIndex="2" onAction="#handleRotateRight">
+        <padding>
+            <Insets bottom="10.0" left="65.0" right="65.0" top="10.0" />
+        </padding>
+    </Button>
+
 </GridPane>
